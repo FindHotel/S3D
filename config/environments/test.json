@@ -1,6 +1,7 @@
 {
   "AWS_REGION": "eu-west-1",
   "ENVIRONMENT": "test",
+  "LOG_LEVEL": "debug",
   "S3_BUCKET": "raw-data",
   "S3_PREFIX": "2018/03/01",
   "TABLE_ENDPOINT": "http://localhost:8000",
