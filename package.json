@@ -1,0 +1,33 @@
+{
+  "name": "S3D",
+  "version": "1.0.0",
+  "description": "Loads JSON files from AWS S3 and inserts them to a DynamoDB",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/FindHotel/S3D"
+  },
+  "keywords": [
+    "aws",
+    "s3",
+    "dynamo"
+  ],
+  "author": "Mohamed Osama",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "eslint": "^4.15.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "jasmine": "^3.1.0",
+    "json-env": "^1.0.1"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.206.0",
+    "log4js": "^2.5.3"
+  }
+}

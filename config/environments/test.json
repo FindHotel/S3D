@@ -1,0 +1,6 @@
+{
+  "DYNAMO_LOAD_WRITE_CAPACITY": "200",
+  "DYNAMO_TABLE": "testS3D",
+  "ENVIRONMENT": "development",
+  "S3_FILE_LOCATION": "50"
+}
