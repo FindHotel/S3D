@@ -1,6 +1,13 @@
 # S3D
 
-Loads JSON files from AWS S3 and inserts them to a DynamoDB
+Loads JSON files from AWS S3 and inserts them to a DynamoDB as a key-value store.
+
+## Input
+ndjson files under an s3 bucket and prefix. Each line has a JSON object containing 2 required keys (key, value) and one optional key (expires).
+Example:
+```json
+{"key": {"S":"1"}, "value": {"S": { "BKS":1234 } },"expires": {"N": 1000}}
+```
 
 ## Technical requirements
 - Node.js 6.10
