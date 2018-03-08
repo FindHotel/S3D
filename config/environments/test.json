@@ -1,6 +1,10 @@
 {
-  "DYNAMO_LOAD_WRITE_CAPACITY": "200",
-  "DYNAMO_TABLE": "testS3D",
-  "ENVIRONMENT": "development",
-  "S3_FILE_LOCATION": "50"
+  "AWS_REGION": "eu-west-1",
+  "ENVIRONMENT": "test",
+  "S3_BUCKET": "raw-data",
+  "S3_PREFIX": "2018/03/01",
+  "TABLE_ENDPOINT": "http://localhost:8000",
+  "TABLE_NAME": "testS3D",
+  "WRITE_CAPACITY_DURING_LOAD": "200",
+  "WRITE_CAPACITY": "10",
 }
