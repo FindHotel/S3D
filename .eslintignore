@@ -1,0 +1,10 @@
+# http://eslint.org/docs/user-guide/configuring
+
+# /node_modules/* and /bower_components/* ignored by default
+/node_modules/*
+
+docs/*
+cloudformation/*
+
+# ignore spec/ (Jasmine loaded)
+spec/

@@ -1,6 +1,6 @@
 # S3D
 
-Loads JSON files from AWS S3 and inserts them to a DynamoDB as a key-value store.
+Loads ndjson files from AWS S3 and inserts them to a DynamoDB as a key-value store.
 
 ## Input
 ndjson files under an s3 bucket and prefix. Each line has a JSON object containing 2 required keys (key, value) and one optional key (expires).
