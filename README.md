@@ -18,6 +18,20 @@ Example:
 ## Setup
 - `yarn install`
 
+## Run
+```bash
+ENVIRONMENT=test \
+LOG_LEVEL=debug \
+TABLE_NAME=testS3D \
+READ_CAPACITY=10 \
+WRITE_CAPACITY=10 \
+WRITE_CAPACITY_DURING_LOAD=25 \
+TABLE_ENDPOINT=http://localhost:8000 \
+S3_BUCKET=test-bucket \
+S3_PREFIX=testFolder \
+yarn start
+```
+
 ## Environment variables
 ```bash
 # General
