@@ -1,0 +1,8 @@
+language: node_js
+node_js:
+  - "6.10.3"
+env:
+  global:
+    - AWS_REGION=fake
+    - AWS_SECRET_ACCESS_KEY=fake
+    - AWS_ACCESS_KEY_ID=fake

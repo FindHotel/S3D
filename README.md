@@ -1,5 +1,7 @@
 # S3D
 
+[![Master](https://travis-ci.org/FindHotel/S3D.svg)](https://travis-ci.org/FindHotel/S3D)
+
 Loads ndjson files from AWS S3 and inserts them to a DynamoDB as a key-value store.
 
 ## Input
