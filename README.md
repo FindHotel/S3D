@@ -1,6 +1,6 @@
 # S3D
 
-Loads JSON files from AWS S3 and inserts them to a DynamoDB as a key-value store.
+Loads ndjson files from AWS S3 and inserts them to a DynamoDB as a key-value store.
 
 ## Input
 ndjson files under an s3 bucket and prefix. Each line has a JSON object containing 2 required keys (key, value) and one optional key (expires).
@@ -17,6 +17,27 @@ Example:
 
 ## Setup
 - `yarn install`
+
+## Environment variables
+```bash
+# General
+ENVIRONMENT
+LOG_LEVEL # default none
+
+# S3 Variables
+S3_BUCKET
+S3_PREFIX
+
+# Dynamo
+AWS_REGION
+TABLE_NAME
+READ_CAPACITY
+WRITE_CAPACITY_DURING_LOAD
+WRITE_CAPACITY
+
+# Dynamo (testing only)
+TABLE_ENDPOINT
+```
 
 ## Tests
 ##### Run tests
@@ -35,35 +56,6 @@ https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.h
 
 ```bash
 java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb
-```
-##### Create local database
-
-```js
-var params = {
-  AttributeDefinitions: [
-    {
-      AttributeName: "key",
-      AttributeType: "S"
-    }
-  ],
-  KeySchema: [
-    {
-      AttributeName: "key",
-      KeyType: "HASH"
-     }
-  ],
-  ProvisionedThroughput: {
-    ReadCapacityUnits: 5,
-    WriteCapacityUnits: 5
-  },
-  TableName: "testS3D"
- };
-
-const dynamodb = new AWS.DynamoDB({ endpoint: new AWS.Endpoint('http://localhost:8000') });
-dynamodb.createTable(params, function(err, data) {
-  if (err) console.log(err, err.stack);
-  else     console.log(data);
-});
 ```
 
 ## Lint
