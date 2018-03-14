@@ -18,6 +18,27 @@ Example:
 ## Setup
 - `yarn install`
 
+## Environment variables
+```bash
+# General
+ENVIRONMENT
+LOG_LEVEL # default none
+
+# S3 Variables
+S3_BUCKET
+S3_PREFIX
+
+# Dynamo
+AWS_REGION
+TABLE_NAME
+READ_CAPACITY
+WRITE_CAPACITY_DURING_LOAD
+WRITE_CAPACITY
+
+# Dynamo (testing only)
+TABLE_ENDPOINT
+```
+
 ## Tests
 ##### Run tests
 ```bash
@@ -35,35 +56,6 @@ https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.h
 
 ```bash
 java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb
-```
-##### Create local database
-
-```js
-var params = {
-  AttributeDefinitions: [
-    {
-      AttributeName: "key",
-      AttributeType: "S"
-    }
-  ],
-  KeySchema: [
-    {
-      AttributeName: "key",
-      KeyType: "HASH"
-     }
-  ],
-  ProvisionedThroughput: {
-    ReadCapacityUnits: 5,
-    WriteCapacityUnits: 5
-  },
-  TableName: "testS3D"
- };
-
-const dynamodb = new AWS.DynamoDB({ endpoint: new AWS.Endpoint('http://localhost:8000') });
-dynamodb.createTable(params, function(err, data) {
-  if (err) console.log(err, err.stack);
-  else     console.log(data);
-});
 ```
 
 ## Lint
