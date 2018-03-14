@@ -8,5 +8,5 @@
   "TABLE_ENDPOINT": "http://localhost:8000",
   "TABLE_NAME": "testS3D",
   "WRITE_CAPACITY_DURING_LOAD": "200",
-  "WRITE_CAPACITY": "10",
+  "WRITE_CAPACITY": "10"
 }
