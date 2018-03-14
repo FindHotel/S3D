@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node lib/index.js",
     "lint": "./node_modules/.bin/eslint .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node ./spec/specHelper.js"
   },
   "repository": {
     "type": "git",
@@ -31,6 +31,7 @@
   "dependencies": {
     "aws-sdk": "^2.206.0",
     "log4js": "^2.5.3",
-    "ndjson": "^1.5.0"
+    "ndjson": "^1.5.0",
+    "rewire": "^3.0.2"
   }
 }
