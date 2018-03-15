@@ -1,6 +1,7 @@
 # S3D
 
 [![Master](https://travis-ci.org/FindHotel/S3D.svg)](https://travis-ci.org/FindHotel/S3D)
+[![DockerHub](https://img.shields.io/docker/pulls/findhotel/s3d.svg)](https://hub.docker.com/r/findhotel/s3d)
 
 Loads ndjson files from AWS S3 and inserts them to a DynamoDB as a key-value store.
 
