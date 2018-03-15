@@ -1,0 +1,10 @@
+.git
+*Dockerfile*
+*docker-compose*
+node_modules
+LICENSE
+.travis.yml
+.eslint*
+.editorconfig
+config/environments
+spec
