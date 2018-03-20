@@ -1,6 +1,6 @@
 {
   "name": "S3D",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Loads JSON files from AWS S3 and inserts them to a DynamoDB",
   "main": "lib/index.js",
   "scripts": {

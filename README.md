@@ -3,7 +3,7 @@
 [![Master](https://travis-ci.org/FindHotel/S3D.svg)](https://travis-ci.org/FindHotel/S3D)
 [![DockerHub](https://img.shields.io/docker/pulls/findhotel/s3d.svg)](https://hub.docker.com/r/findhotel/s3d)
 
-Loads ndjson files from AWS S3 and inserts them to a DynamoDB as a key-value store.
+Loads ndjson files from AWS S3 and inserts them to a DynamoDB as a key-value store. It thus provides a simple way of serving static content that changes infrequently in a REST API.
 
 ## Input
 ndjson files under an s3 bucket and prefix. Each line has a JSON object containing 2 required keys (key, value) and one optional key (expires).
@@ -17,6 +17,9 @@ Example:
 - AWS S3
 - DynamoDB
 - Docker (optional)
+
+## Usage Demo
+[Follow this link](https://github.com/FindHotel/S3D-demo)
 
 ## Setup
 - `yarn install`

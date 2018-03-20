@@ -66,10 +66,15 @@ function runSuite() {
         const exitCode = 1;
       }
 
-      dynamodb.deleteTable(deletionParams).promise().then(process.exit.bind(null, exitCode));
+      dynamodb.deleteTable(deletionParams).promise()
+        .then(process.exit.bind(null, exitCode))
+        .catch((err) => Promise.reject(err));
     });
 
     jasmine.execute();
+  }).catch((err) => {
+    logger.error('failed to load test suite: %s', JSON.stringify(err));
+    Promise.reject(err);
   })
 }
 
