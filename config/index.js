@@ -1,5 +1,6 @@
 module.exports = {
   awsRegion: process.env.AWS_REGION,
+  dynamoBatchSize: 25,
   dynamoLoadWriteCapacity: parseInt(process.env.WRITE_CAPACITY_DURING_LOAD, 10),
   dynamoTable: process.env.TABLE_NAME,
   dynamoTableEndpoint: process.env.TABLE_ENDPOINT, // for test env only
