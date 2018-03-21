@@ -1,6 +1,6 @@
 {
   "name": "S3D",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Loads JSON files from AWS S3 and inserts them to a DynamoDB",
   "main": "lib/index.js",
   "scripts": {
@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "aws-sdk": "^2.206.0",
+    "limiter": "^1.1.2",
     "log4js": "^2.5.3",
     "ndjson": "^1.5.0",
     "rewire": "^3.0.2"
